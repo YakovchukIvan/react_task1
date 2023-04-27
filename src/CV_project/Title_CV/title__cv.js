@@ -1,21 +1,17 @@
 import './title__cv.css'
+import Contact from './contact/contact'
+import TechSkills from './tech_skills/tech_skills'
+import SoftSkills from './soft_skills/soft_skills'
 
-function titleBlock() {
+
+function TitleBlock() {
     return(
         <div className='title__block'>
-            <p>Title</p>
+            <Contact/>
+            <TechSkills/>
+            <SoftSkills/>
         </div>
     )
 }
 
-export default titleBlock
-
-// import './Component1.css'
-
-// function Component1() {
-//     return(
-//         <h1>Component1</h1>
-//     )
-// }
-
-// export default Component1
+export default TitleBlock
