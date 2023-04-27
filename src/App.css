@@ -1,6 +1,6 @@
 body {
   border: 1px solid red;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -11,7 +11,8 @@ body {
   width: 100%;
   width: 800px;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: grid;
   grid-template-columns: 2fr 4fr;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
