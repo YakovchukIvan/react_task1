@@ -1,4 +1,21 @@
 .title__block {
     background-color: #9CD4EB;
     padding-top: 20px;
+    color: #252222;
+}
+
+p {
+    margin: 10px 25px;
+    padding: 0;
+}
+
+p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 25px 0px 10px 25px;
+    padding: 0;
+}
+
+ul > li {
+    margin-bottom: 5px;
 }
