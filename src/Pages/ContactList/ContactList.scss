@@ -1,0 +1,28 @@
+.wrapper {
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.contact__list {
+    max-width: 1440px;
+    width: 100%;
+    border: 2px solid rgb(107, 33, 33);
+    margin: 0;
+    padding: 0;
+
+    .item__list {
+        border: 2px solid rgb(196, 238, 82);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        p {
+            width: 200px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    }
+
+
+}
