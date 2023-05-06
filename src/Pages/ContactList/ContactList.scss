@@ -2,26 +2,36 @@
     border: 3px solid black;
     display: flex;
     justify-content: center;
+    padding: 12px;
 }
 
-.contact__list {
+.contact__block {
     max-width: 1440px;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     border: 2px solid rgb(107, 33, 33);
     margin: 0;
     padding: 0;
 
-    .item__list {
+    .contact__block-status ,
+    .contact__user-block {
         border: 2px solid rgb(196, 238, 82);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 20px;
+        padding: 12px;
+    }
 
-        p {
-            width: 200px;
-            margin: 10px;
-            border: 1px solid black;
+    .contact__user-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+        .contact__user {
+            max-width: 250px;
+            width: 100%;
+            border: 1px solid red;
         }
+
     }
 
 
