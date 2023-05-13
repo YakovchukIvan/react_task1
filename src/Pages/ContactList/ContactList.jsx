@@ -1,3 +1,4 @@
+import ContactItem from '../../Components/ContactItem/ContactItem'
 import './ContactList.scss'
 
 const ContactList = () => {
@@ -9,155 +10,37 @@ const ContactList = () => {
 
                 <div className="contact__block-status">
                     <ul className='contact__list-status'>
-                        <li className='contact__item-status'>Work</li>
-                        <li className='contact__item-status'>Family</li>
-                        <li className='contact__item-status'>Private</li>
-                        <li className='contact__item-status'>Friends</li>
+                        <li className='contact__item-all item__all'>
+                            <p className='list__item-all'>All contact</p>
+                            <p>100</p>
+                        </li>
+                        <li className='contact__item-status item__work'>
+                            <p className='list__item-work'>Work</p>
+                            <p>2</p>
+                        </li>
+                        <li className='contact__item-status item__family'>
+                            <p className='list__item-family'>Family</p>
+                            <p>4</p>
+                        </li>
+                        <li className='contact__item-status item__private'>
+                            <p className='list__item-private'>Private</p>
+                            <p>1</p>
+                        </li>
+                        <li className='contact__item-status item__friends'>
+                            <p className='list__item-friends'>Friends</p>
+                            <p>1221</p>
+                        </li>
                     </ul>
                 </div>
 
                 <div className="contact__user-block">
-                    <div className="contact__user">
-                        <p>Name</p>
-                        <p>Phone</p>
-                        <p>Email</p>
-                        <p>Avatar</p>
-                        <p>Gender</p>
-                        <p>Status</p>
-                        <p>Favorite</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Name</p>
-                        <p>Phone</p>
-                        <p>Email</p>
-                        <p>Avatar</p>
-                        <p>Gender</p>
-                        <p>Status</p>
-                        <p>Favorite</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
-                    <div className="contact__user">
-                        <p>Ivan</p>
-                        <p>380971231415</p>
-                        <p>Labuda@gmail.com</p>
-                        <p>Avatar</p>
-                        <p>Men</p>
-                        <p>Work</p>
-                        <p>True</p>
-                    </div>
+
+                    <ContactItem/>
+
+                    
                 </div>
 
             </div>
-
-            {/* <ul className="contact__list">
-                <li className='item__list'>
-                    <p>Name</p>
-                    <p>Phone</p>
-                    <p>Email</p>
-                    <p>Avatar</p>
-                    <p>Gender</p>
-                    <p>Status</p>
-                    <p>Favorite</p>
-                </li>
-                <li className='item__list'>
-                    <p>Ivan</p>
-                    <p>380971231415</p>
-                    <p>Labuda@gmail.com</p>
-                    <p>Avatar</p>
-                    <p>Men</p>
-                    <p>Work</p>
-                    <p>True</p>
-                </li>
-                <li className='item__list'>
-                    <p>Name</p>
-                    <p>Phone</p>
-                    <p>Email</p>
-                    <p>Avatar</p>
-                    <p>Gender</p>
-                    <p>Status</p>
-                    <p>Favorite</p>
-                </li>
-                <li className='item__list'>
-                    <p>Name</p>
-                    <p>Phone</p>
-                    <p>Email</p>
-                    <p>Avatar</p>
-                    <p>Gender</p>
-                    <p>Status</p>
-                    <p>Favorite</p>
-                </li>
-            </ul> */}
 
             </div>
         </>

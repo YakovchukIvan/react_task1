@@ -9,10 +9,64 @@
     max-width: 1440px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     border: 2px solid rgb(107, 33, 33);
     margin: 0;
     padding: 0;
+
+    .contact__list-status {
+        list-style-type: none;
+        // border: 1px solid red;
+        padding: 0;
+        margin-top: 30px;
+
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid blue;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 18px;
+
+            p {
+                padding: 5px;
+                margin: 0;
+            }
+            p:nth-child(2) {
+                // border: 1px solid red;
+                // width: 25px;
+                border-radius: 8px;
+                text-align: center;
+                // margin-right: 10px;
+            }
+
+        }
+
+        .item__all {
+            margin-bottom: 20px;
+            color: rgb(61, 60, 12);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .item__work>p {
+            color: rgb(33, 204, 204);
+        }
+
+        .item__family>p {
+            color: rgb(97, 90, 163);
+        }
+
+        .item__private>p {
+            color: burlywood;
+        }
+
+        .item__friends>p {
+            color: cadetblue;
+        }
+
+    }
 
     .contact__block-status ,
     .contact__user-block {
@@ -21,16 +75,10 @@
     }
 
     .contact__user-block {
+
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-
-        .contact__user {
-            max-width: 250px;
-            width: 100%;
-            border: 1px solid red;
-        }
+        justify-content: center;
+        border: 2px solid rgb(16, 20, 3);
 
     }
 

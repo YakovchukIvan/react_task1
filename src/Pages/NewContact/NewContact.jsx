@@ -1,8 +1,19 @@
+// css
 import './NewContact.scss'
 
-import * as Yup from 'yup'
+// valid
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import {validationSchema} from '../../validation/Validation'
+
+// for id
 import {v4 as uuidv4} from 'uuid'
+
+// router-dom
+import { useNavigate } from 'react-router-dom'
+
+
+
+
 
 const NewContact = () => {
     const initialValues = {
@@ -16,18 +27,10 @@ const NewContact = () => {
         favorite: ''
     }
 
-    const validationSchema = Yup.object().shape({
-        name: Yup.string().required('Name is required'),
-        phone: Yup.string().required('Phone is required'),
-        email: Yup.string().email('invalid email').required('Email is required'),
-        avatar: Yup.string().url('Invalid URL').required('Avatar is required'),
-        gender: Yup.string().oneOf(['Men', 'Women'],'Invalid gender').required('Gender is required'),
-        status: Yup.string().oneOf(['Work', 'Family', 'Private', 'Friends'],'Invalid status').required('Status is required'),
-        favorite: Yup.boolean()
-    })
-
+    const navigate = useNavigate();
     const handleSubmit = (values) => {
         console.log(values);
+        navigate('/');
     }
 
 
@@ -53,13 +56,13 @@ const NewContact = () => {
 
                             <div>
                                 <label htmlFor='email'>Email</label>
-                                <Field type='email' name='email' />
+                                <Field type='email' name='email'/>
                                 <ErrorMessage name='email' />
                             </div>
 
                             <div>
                                 <label htmlFor='avatar'>Avatar</label>
-                                <Field type='text' name='avatar' />
+                                <Field type='file' name='avatar'/>
                                 <ErrorMessage name='avatar' />
                             </div>
 
