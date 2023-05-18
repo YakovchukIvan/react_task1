@@ -1,0 +1,41 @@
+.wrapper_contact {
+    border: 2px solid rgb(0, 255, 64);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user__contact {
+    border: 2px solid rgb(129, 32, 32);
+
+}
+.btn__pencil, .btn__delete {
+    border: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+.btn__pencil {
+    background-image: url(./pencil.svg);
+}
+
+.btn__delete {
+    background-image: url(./delete.svg);
+}
+
+.btn__pencil:hover {
+    background-image: url(./pencil-green.svg);
+}
+
+.btn__delete:hover {
+    background-image: url(./delete-red.svg);
+}
+
+.btn__delete:active {
+    transform: scale(1.05);
+}
+
+.btn__pencil:active {
+    transform: scale(1.05);
+}

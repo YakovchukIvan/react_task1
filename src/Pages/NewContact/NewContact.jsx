@@ -33,7 +33,7 @@ const NewContact = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = (values) => {
-      console.log("values", values);
+      console.log(values);
       dispatch(addContact(values))
       navigate('/');
     };
