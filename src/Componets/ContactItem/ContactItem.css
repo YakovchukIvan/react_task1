@@ -1,13 +1,24 @@
 .wrapper_contact {
-    border: 2px solid rgb(0, 255, 64);
+    /* border: 2px solid rgb(0, 255, 64); */
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 .user__contact {
-    border: 2px solid rgb(129, 32, 32);
+    /* border: 2px solid rgb(129, 32, 32); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    position: relative;
 
+    padding: 10px;
 }
+
+.avatar__user {
+    border-radius: 50%;
+}
+
 .btn__pencil, .btn__delete {
     border: none;
     background-repeat: no-repeat;
@@ -18,10 +29,16 @@
 
 .btn__pencil {
     background-image: url(./pencil.svg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .btn__delete {
     background-image: url(./delete.svg);
+    position: absolute;
+    top: 125px;
+    right: 0px;
 }
 
 .btn__pencil:hover {

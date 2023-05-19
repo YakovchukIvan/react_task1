@@ -36,7 +36,7 @@ const ContactItem = () => {
             {filteredContacts && filteredContacts.map((contact) => (
                 <div className='user__contact' key={contact.id}>
                   <div className=''>
-                    <img className='' src={`https://randomuser.me/api/portraits/${contact.gender}/${contact.avatar}.jpg`} alt="avatar" />
+                    <img className='avatar__user' src={`https://randomuser.me/api/portraits/${contact.gender}/${contact.avatar}.jpg`} alt="avatar" />
                   </div>
                     <div className=''>
                       <div className=''>
