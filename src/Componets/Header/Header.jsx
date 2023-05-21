@@ -20,7 +20,6 @@ const Header = () => {
     setSearchTerm(value)
   }
 
-
     return(
         <nav className='container rounded shadow-lg'>
           <div className='row'>
