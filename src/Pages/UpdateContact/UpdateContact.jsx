@@ -42,6 +42,18 @@ const UpdateContact = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (values) => {
+
+      const contactString = JSON.stringify(contact);
+      const valuesString = JSON.stringify(values);
+
+      console.log("contactString", contactString);
+      console.log("valuesString", valuesString);
+
+      if (contactString === valuesString) {
+        console.log('good');
+      } else {
+        console.log('no good');
+      }
       dispatch(editContact(id, values))
       navigate('/');
     };
