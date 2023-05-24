@@ -42,20 +42,17 @@ const UpdateContact = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (values) => {
+      const lodash = require('lodash'); // підключаємо бібліотеку lodash і вона робить перевірку наших обєктів
 
-      const contactString = JSON.stringify(contact);
-      const valuesString = JSON.stringify(values);
-
-      console.log("contactString", contactString);
-      console.log("valuesString", valuesString);
-
-      if (contactString === valuesString) {
-        console.log('good');
+      if (lodash.isEqual(contact, values)) {
+        console.log('Змін немає');
+        navigate('/');
       } else {
-        console.log('no good');
+        console.log('Зміни є');
+        dispatch(editContact(id, values))
+        navigate('/');
       }
-      dispatch(editContact(id, values))
-      navigate('/');
+      
     };
 
     return(
