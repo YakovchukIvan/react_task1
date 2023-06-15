@@ -35,6 +35,7 @@ const ContactItem = () => {
                 <div className='user__contact' key={contact.id}>
                   <div className=''>
                     <img className='avatar__user' src={`https://randomuser.me/api/portraits/${contact.gender}/${contact.avatar}.jpg`} alt="avatar" />
+                    <span title='Улюблені' className={`img__${contact.favorite}`}></span>
                   </div>
                     <div className=''>
                       <div className=''>
@@ -47,18 +48,9 @@ const ContactItem = () => {
                       <div className=''>
                         <p>{contact.email}</p>
                       </div>
-                      <div className=''>
-                        <Link to={`/update-contact/${contact.id}`}><button title='редагувати контакт' className='btn__pencil'></button></Link>
-
-                        <button className='' onClick={() => setDetails(true)}>
-                          Show Details
-                        </button>
-
-                        { details && <div>
-                          <p>{contact.email}</p>
-                        </div> }
-
-                      </div>    
+                      
+                      <Link to={`/update-contact/${contact.id}`}><button title='редагувати контакт' className='btn__pencil'></button></Link> 
+                      
                     </div>
                 </div>
             ))}

@@ -11,12 +11,23 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
     position: relative;
-
     padding: 10px;
 }
 
 .avatar__user {
     border-radius: 50%;
+}
+
+.img__true {
+    display: block;
+    background-image: url(./love-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
 .btn__pencil {
