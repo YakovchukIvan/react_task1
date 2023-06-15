@@ -1,20 +1,26 @@
 import './ContactItem.css'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { deleteContact } from '../../redux/action'
+// import { deleteContact } from '../../redux/action'
 
 import { Link } from "react-router-dom"
 
+
+import React, { useState } from 'react'
+
+
 const ContactItem = () => {
+
+  const [details, setDetails] = useState(false);
 
   const contacts = useSelector((state) => state.contacts)
   const searchTerm = useSelector((state) => state.searchTerm)
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
-  const handleDeleteContact = (id) => {
-    console.log(id);
-    dispatch(deleteContact(id))
-  }
+  // const handleDeleteContact = (id) => {
+  //   console.log(id);
+  //   dispatch(deleteContact(id))
+  // }
 
   const filteredContacts = searchTerm
   ? contacts.filter((contact) => 
@@ -25,14 +31,6 @@ const ContactItem = () => {
 
     return(
         <div className='wrapper_contact'>
-          {/* <div className='container-fluid'>
-            <div className='row'>
-              <div className='col-4'><h4 className='text-end text-primary m-3'>Name</h4></div>
-              <div className='col-4'><h4 className='text-center text-primary m-3'>Phone</h4></div>
-              <div className='col-4'><h4 className=' text-primary m-3'>Email</h4></div>
-            </div>
-          </div> */}
-          {/* <hr className='m-0' /> */}
             {filteredContacts && filteredContacts.map((contact) => (
                 <div className='user__contact' key={contact.id}>
                   <div className=''>
@@ -51,7 +49,15 @@ const ContactItem = () => {
                       </div>
                       <div className=''>
                         <Link to={`/update-contact/${contact.id}`}><button title='редагувати контакт' className='btn__pencil'></button></Link>
-                        <button title='видалити контакт' onClick={() => handleDeleteContact(contact.id)} className='btn__delete'></button>
+
+                        <button className='' onClick={() => setDetails(true)}>
+                          Show Details
+                        </button>
+
+                        { details && <div>
+                          <p>{contact.email}</p>
+                        </div> }
+
                       </div>    
                     </div>
                 </div>

@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { editContact } from '../../redux/action'
-
+import { deleteContact } from '../../redux/action'
 
 
 
@@ -42,18 +42,15 @@ const UpdateContact = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (values) => {
-      const lodash = require('lodash'); // підключаємо бібліотеку lodash і вона робить перевірку наших обєктів
-
-      if (lodash.isEqual(contact, values)) {
-        console.log('Змін немає');
-        navigate('/');
-      } else {
-        console.log('Зміни є');
-        dispatch(editContact(id, values))
-        navigate('/');
-      }
-      
+      dispatch(editContact(id, values))
+      navigate('/');
     };
+
+    const handleDeleteContact = (id) => {
+      console.log(id);
+      dispatch(deleteContact(id))
+      navigate('/');
+    }
 
     return(
       <div className='container'>
@@ -61,7 +58,10 @@ const UpdateContact = () => {
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
               {({isSubmitting }) => (
                 <Form >
-                  <h1 className="text-center">Edit Contact</h1>
+                  <h1 className="text-center">
+                    Edit Contact
+                    <button title='видалити контакт' onClick={() => handleDeleteContact(contact.id)} className='btn__delete'></button>
+                  </h1>
                   <hr />
                   <div className='m-4'>
                     <Field className="form-control fs-5" placeholder='Name' type='text' name='name' />
@@ -110,6 +110,7 @@ const UpdateContact = () => {
                   <div className='m-4'>
                   <button type='submit' className="btn btn-primary btn-lg form-control" disabled={isSubmitting}>Update</button>
                   </div>
+
                 </Form>
               )}
             </Formik>
