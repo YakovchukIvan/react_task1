@@ -18,7 +18,9 @@
     border-radius: 50%;
 }
 
-.img__true {
+.img__true,
+.img__,
+.img__false {
     display: block;
     background-image: url(./love-icon.svg);
     background-repeat: no-repeat;
@@ -28,6 +30,11 @@
     position: absolute;
     top: 5px;
     left: 5px;
+}
+
+.img__, 
+.img__false  {
+    background-image: url(./love-icon-black.svg);
 }
 
 .btn__pencil {

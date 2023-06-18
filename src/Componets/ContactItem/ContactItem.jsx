@@ -6,12 +6,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Link } from "react-router-dom"
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 
 const ContactItem = () => {
 
-  const [details, setDetails] = useState(false);
+  // const [details, setDetails] = useState(false);
 
   const contacts = useSelector((state) => state.contacts)
   const searchTerm = useSelector((state) => state.searchTerm)
