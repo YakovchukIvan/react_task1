@@ -1,26 +1,11 @@
 import './ContactItem.css'
-
 import { useSelector, useDispatch } from 'react-redux'
-// import { deleteContact } from '../../redux/action'
-
 import { Link } from "react-router-dom"
-
-
-// import React, { useState } from 'react'
-
 
 const ContactItem = () => {
 
-  // const [details, setDetails] = useState(false);
-
   const contacts = useSelector((state) => state.contacts)
   const searchTerm = useSelector((state) => state.searchTerm)
-  // const dispatch = useDispatch()
-
-  // const handleDeleteContact = (id) => {
-  //   console.log(id);
-  //   dispatch(deleteContact(id))
-  // }
 
   const filteredContacts = searchTerm
   ? contacts.filter((contact) => 
